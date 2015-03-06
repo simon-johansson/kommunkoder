@@ -39,7 +39,8 @@
     "load-grunt-tasks": "^3.1.0",
     "mocha": "^2.1.0",
     "time-grunt": "^1.1.0",
-    "grunt-release": "^0.11.0"
+    "grunt-release": "^0.11.0",
+    "mocha-silent-reporter": "^1.0.0"
   },
   "scripts": {
     "test": "grunt",
