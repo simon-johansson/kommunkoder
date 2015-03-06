@@ -4,7 +4,9 @@ var isUndefined = require('lodash/lang/isUndefined');
 var isArray =     require('lodash/lang/isArray');
 var isNumber =    require('lodash/lang/isNumber');
 var isString =    require('lodash/lang/isString');
+
 var filter =      require('lodash/collection/filter');
+var first =       require('lodash/array/first');
 
 var data = require('./data');
 
@@ -33,7 +35,7 @@ function get (query) {
   } if (isString(query)) {
     query = objectifyQuery(query);
   }
-  return filter(data, query)[0];
+  return first(filter(data, query));
 }
 
 module.exports = get;
