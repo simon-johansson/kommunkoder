@@ -1,14 +1,7 @@
 'use strict';
+var _ = require('lodash');
 var expect = require('chai').expect;
 var kommunkoder = require('../');
-
-describe('kommunkoder()', function () {
-  it('should return all municipalities', function () {
-    var result = kommunkoder();
-    expect(result).to.be.an("Array");
-    expect(result).to.have.length(290);
-  });
-});
 
 function suite (result) {
   it('should return object with keys "code", "municipality" & "county"', function () {
@@ -24,6 +17,15 @@ function suite (result) {
     expect(result.county).to.eql('Västra Götalands län');
   });
 }
+
+describe('kommunkoder()', function () {
+  it('should return all municipalities', function () {
+    var result = kommunkoder();
+    expect(result).to.be.an("Array");
+    expect(result).to.have.length(290);
+  });
+});
+
 
 describe('kommunkoder(1140)', function () {
   var result = kommunkoder(1440);
@@ -57,3 +59,33 @@ describe('kommunkoder(885)', function () {
     expect(result.municipality).to.eql('Borgholm');
   });
 });
+
+describe('kommunkoder(["1231", "1233", "1256"])', function () {
+  var result = kommunkoder(["1231", "1233", "1256"]);
+  it('should be able to take array of codes as argument', function () {
+    expect(result).to.be.an("Array");
+  });
+  it('should return Array with three items', function () {
+    var truth = [
+      {
+        "code": "1231",
+        "municipality": "Burlöv",
+        "county": "Skåne län"
+      }, {
+        "code": "1233",
+        "municipality": "Vellinge",
+        "county": "Skåne län"
+      }, {
+        "code": "1256",
+        "municipality": "Östra Göinge",
+        "county": "Skåne län"
+      }
+    ];
+
+    expect(result).to.have.length(3);
+    result.forEach(function(el, i) {
+      expect(_.isEqual(el, truth[i])).to.be.true;
+    });
+  });
+});
+
