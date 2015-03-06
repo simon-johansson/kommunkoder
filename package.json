@@ -35,12 +35,13 @@
     "grunt-contrib-nodeunit": "^0.4.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-mocha-cli": "^1.12.0",
+    "grunt-release": "^0.11.0",
     "jshint-stylish": "^1.0.1",
     "load-grunt-tasks": "^3.1.0",
     "mocha": "^2.1.0",
+    "mocha-silent-reporter": "^1.0.0",
     "time-grunt": "^1.1.0",
-    "grunt-release": "^0.11.0",
-    "mocha-silent-reporter": "^1.0.0"
+    "istanbul": "^0.3.7"
   },
   "scripts": {
     "test": "grunt",
