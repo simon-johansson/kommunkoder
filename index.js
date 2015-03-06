@@ -1,6 +1,11 @@
 'use strict';
 
-var _ = require('lodash');
+var isUndefined = require('lodash/lang/isUndefined');
+var isArray =     require('lodash/lang/isArray');
+var isNumber =    require('lodash/lang/isNumber');
+var isString =    require('lodash/lang/isString');
+var filter =      require('lodash/collection/filter');
+
 var data = require('./data');
 
 function iterateOverQuery(querryArray) {
@@ -19,16 +24,16 @@ function objectifyQuery(queryString) {
 }
 
 function get (query) {
-  if (_.isUndefined(query)) {
+  if (isUndefined(query)) {
     return data;
-  } if (_.isArray(query)) {
+  } if (isArray(query)) {
     return iterateOverQuery(query);
-  } if (_.isNumber(query)) {
+  } if (isNumber(query)) {
     query = stringifyQuery(query);
-  } if (_.isString(query)) {
+  } if (isString(query)) {
     query = objectifyQuery(query);
   }
-  return _.filter(data, query)[0];
+  return filter(data, query)[0];
 }
 
 module.exports = get;
