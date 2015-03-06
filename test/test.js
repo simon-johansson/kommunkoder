@@ -84,7 +84,7 @@ describe('kommunkoder(["1231", "1233", "1256"])', function () {
 
     expect(result).to.have.length(3);
     result.forEach(function(el, i) {
-      expect(_.isEqual(el, truth[i])).to.be.true;
+      expect(_.isEqual(el, truth[i])).to.eql(true);
     });
   });
 });
