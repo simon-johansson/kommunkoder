@@ -60,6 +60,20 @@ describe('kommunkoder(885)', function () {
   });
 });
 
+describe('(kommunkoder(666)', function () {
+  var result = kommunkoder(666);
+  it('should return "undefined" if no match is found', function () {
+    expect(result).to.eql(undefined);
+  });
+});
+
+describe('kommunkoder({municipality: "Ale", code: "666"})', function () {
+  var result = kommunkoder({municipality: "Ale", code: "666"});
+  it('should return "undefined" if the serarch term does not equal a perfect match', function () {
+    expect(result).to.eql(undefined);
+  });
+});
+
 describe('kommunkoder(["1231", "1233", "1256"])', function () {
   var result = kommunkoder(["1231", "1233", "1256"]);
   it('should be able to take array of codes as argument', function () {
@@ -67,21 +81,10 @@ describe('kommunkoder(["1231", "1233", "1256"])', function () {
   });
   it('should return Array with three items', function () {
     var truth = [
-      {
-        "code": "1231",
-        "municipality": "Burlöv",
-        "county": "Skåne län"
-      }, {
-        "code": "1233",
-        "municipality": "Vellinge",
-        "county": "Skåne län"
-      }, {
-        "code": "1256",
-        "municipality": "Östra Göinge",
-        "county": "Skåne län"
-      }
+      { "code": "1231", "municipality": "Burlöv", "county": "Skåne län" },
+      { "code": "1233", "municipality": "Vellinge", "county": "Skåne län" },
+      { "code": "1256", "municipality": "Östra Göinge", "county": "Skåne län" }
     ];
-
     expect(result).to.have.length(3);
     result.forEach(function(el, i) {
       expect(_.isEqual(el, truth[i])).to.eql(true);
