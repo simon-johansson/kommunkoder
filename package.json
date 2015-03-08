@@ -1,12 +1,12 @@
 {
   "name": "kommunkoder",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Collection of all municipalities in Sweden with corresponding county and municipality codes (kommunkoder).",
   "author": {
     "name": "Simon Johansson",
     "email": "mail@simon-johansson.com"
   },
-  "repository": "simon-johansson/kommunkoder",
+  "repository": "https://github.com/simon-johansson/kommunkoder",
   "license": "MIT",
   "files": [
     "index.js"
@@ -44,7 +44,7 @@
     "istanbul": "^0.3.7"
   },
   "scripts": {
-    "test": "killAll node; node_modules/mocha/bin/mocha -R mocha-silent-reporter -w --no-colors",
+    "test": "node_modules/mocha/bin/mocha",
     "travis": "node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "browser": "browserify index.js > browser.js"
   }
