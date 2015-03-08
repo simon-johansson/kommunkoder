@@ -1,0 +1,14 @@
+node_modules/
+coverage/
+.DS_Store
+.editorconfig
+.gitattributes
+.gitignore
+.jshintrc
+.travis.yml
+.yo-rc.json
+npm-debug.log
+Gruntfile.js
+*.sublime-project
+*.sublime-workspace
+TODO.md
