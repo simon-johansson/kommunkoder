@@ -22,7 +22,7 @@ function stringifyQuery(queryNumber) {
 
 function objectifyQuery(queryString) {
   var query = queryString.length <= 3 ? '0' + queryString : queryString;
-  return {code: query};
+  return { code: query };
 }
 
 function get (query) {
@@ -35,7 +35,8 @@ function get (query) {
   } if (isString(query)) {
     query = objectifyQuery(query);
   }
-  return first(filter(data, query));
+  var result = filter(data, query);
+  return result.length > 1 ? result : first(result);
 }
 
 module.exports = get;
