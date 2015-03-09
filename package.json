@@ -44,7 +44,10 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "repository": "https://github.com/simon-johansson/kommunkoder",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/simon-johansson/kommunkoder.git"
+  },
   "scripts": {
     "browser": "browserify index.js > browser.js",
     "test": "grunt",
