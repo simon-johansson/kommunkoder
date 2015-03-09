@@ -1,4 +1,6 @@
-#  [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Code Climate][codeclimate-image]][codeclimate-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# kommunkoder
+
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Code Climate][codeclimate-image]][codeclimate-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
 > Collection of all municipalities in Sweden with corresponding county and municipality codes (kommunkoder)
 
