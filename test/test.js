@@ -1,6 +1,8 @@
 'use strict';
+
 var _ = require('lodash');
 var expect = require('chai').expect;
+
 var kommunkoder = require('../');
 
 function suite (result) {
@@ -19,10 +21,11 @@ function suite (result) {
 }
 
 describe('kommunkoder()', function () {
-  it('should return all municipalities', function () {
+  it('should return all municipalities without any duplicates', function () {
     var result = kommunkoder();
     expect(result).to.be.an("Array");
     expect(result).to.have.length(290);
+    expect(_.uniq(result)).to.eql(result);
   });
 });
 
@@ -60,7 +63,18 @@ describe('kommunkoder(885)', function () {
   });
 });
 
-describe('(kommunkoder(666)', function () {
+describe('kommunkoder({county: "Stockholms län"})', function () {
+  var result = kommunkoder({county: "Stockholms län"});
+  it('should return array with all municipality in "Stockholms län"', function () {
+    expect(result).to.be.an("Array");
+    expect(result).to.have.length(26);
+    result.forEach(function(el) {
+      expect(el.county).to.eql("Stockholms län");
+    });
+  });
+});
+
+describe('kommunkoder(666)', function () {
   var result = kommunkoder(666);
   it('should return "undefined" if no match is found', function () {
     expect(result).to.eql(undefined);
@@ -89,6 +103,13 @@ describe('kommunkoder(["1231", "1233", "1256"])', function () {
     result.forEach(function(el, i) {
       expect(_.isEqual(el, truth[i])).to.eql(true);
     });
+  });
+});
+
+describe('kommunkoder(["1231", "666", "1256"])', function () {
+  var result = kommunkoder(["1231", "666", "1256"]);
+  it('should return "undefined" for those searches that don´t result in a match', function () {
+    expect(result[1]).to.eql(undefined);
   });
 });
 
