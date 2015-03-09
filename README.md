@@ -40,7 +40,15 @@ kommunkoder(666);
 
 ```sh
 # creates a browser.js
+$ npm install
 $ npm run browser
+```
+
+## Tests
+
+```sh
+$ npm install
+$ npm test
 ```
 
 ## License
