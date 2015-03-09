@@ -4,7 +4,7 @@
 
 > Collection of all municipalities in Sweden with corresponding county and municipality codes (kommunkoder)
 
-Data is provided by [SCB](http://www.scb.se/en_/Finding-statistics/Regional-statistics/Regional-divisions/Counties-and-municipalities/Counties-and-municipalities-in-numerical-order/) (Statistiska Centralbyrån). Latest update to data used in lib was done **2015-03-15**.
+Data is provided by [SCB](http://www.scb.se/en_/Finding-statistics/Regional-statistics/Regional-divisions/Counties-and-municipalities/Counties-and-municipalities-in-numerical-order/) (Statistiska Centralbyrån). Latest update to data used in lib was done **2015-03-09**.
 
 ## Install
 
