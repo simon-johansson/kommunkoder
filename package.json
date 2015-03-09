@@ -1,6 +1,6 @@
 {
   "name": "kommunkoder",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Collection of all municipalities in Sweden with corresponding county and municipality codes (kommunkoder).",
   "author": {
     "name": "Simon Johansson",
