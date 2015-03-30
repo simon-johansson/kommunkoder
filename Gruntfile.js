@@ -97,11 +97,11 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', ['jshint', 'mochacli']);
 
-  grunt.registerTask('client', ['browserify', 'usebanner']);
+  grunt.registerTask('client', ['browserify', 'uglify', 'usebanner']);
 
   grunt.registerTask("release", "Release a new version, push it and publish it", function (target) {
     var target = target ? target : "patch";
-    grunt.task.run("bump-only:" + target, "compile", "bump-commit", "shell:publish");
+    grunt.task.run("bump-only:" + target, "client", "bump-commit", "shell:publish");
   });
 
 };
