@@ -9,14 +9,16 @@ Data is provided by [SCB](http://www.scb.se/en_/Finding-statistics/Regional-stat
 ## Install
 
 ```sh
-$ npm install --save kommunkoder
+$ npm install kommunkoder --save
+```
+
+```sh
+$ bower install kommunkoder --save
 ```
 
 ## Usage
 
 ```js
-var kommunkoder = require('kommunkoder');
-
 kommunkoder();
 // → [ Array of all municipalities ]
 
@@ -40,22 +42,17 @@ kommunkoder(666);
 // → undefined
 ```
 
-```sh
-# creates a browser.js
-$ npm install
-$ npm run browser
-```
-
 ## Tests
 
 ```sh
+# clone this repo
 $ npm install
 $ npm test
 ```
 
 ## License
 
-MIT © [Simon Johansson]()
+MIT © [Simon Johansson](mailto:mail@simon-johansson.com)
 
 [npm-image]: https://badge.fury.io/js/kommunkoder.svg
 [npm-url]: https://npmjs.org/package/kommunkoder
