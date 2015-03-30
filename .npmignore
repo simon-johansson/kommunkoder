@@ -1,5 +1,6 @@
 node_modules/
 coverage/
+
 .DS_Store
 .editorconfig
 .gitattributes
@@ -7,8 +8,12 @@ coverage/
 .jshintrc
 .travis.yml
 .yo-rc.json
+
 npm-debug.log
 Gruntfile.js
+bower.json
+
 *.sublime-project
 *.sublime-workspace
+
 TODO.md
