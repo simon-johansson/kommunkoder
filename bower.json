@@ -1,0 +1,36 @@
+{
+  "name": "kommunkoder",
+  "main": "kommunkoder.js",
+  "version": "1.0.1",
+  "homepage": "https://github.com/simon-johansson/kommunkoder",
+  "authors": [
+    "Simon Johansson <mail@simon-johansson.com>"
+  ],
+  "description": "Collection of all municipalities in Sweden with corresponding county and municipality codes (kommunkoder).",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "county",
+    "kommun",
+    "kommuner",
+    "kommunkoder",
+    "kommunkoder",
+    "län",
+    "municipalities",
+    "municipality",
+    "municipality codes",
+    "sweden"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "coverage",
+    "test",
+    "**/*.json",
+    "*.sublime-project",
+    "*.sublime-workspace",
+    "TODO.md"
+  ]
+}
