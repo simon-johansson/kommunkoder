@@ -15,8 +15,8 @@ module.exports = function (grunt) {
       gruntfile: {
         src: ['Gruntfile.js']
       },
-      js: {
-        src: ['*.js']
+      lib: {
+        src: ['index.js']
       },
       test: {
         src: ['test/**/*.js']
@@ -100,8 +100,8 @@ module.exports = function (grunt) {
   grunt.registerTask('client', ['browserify', 'uglify', 'usebanner']);
 
   grunt.registerTask("release", "Release a new version, push it and publish it", function (target) {
-    var target = target ? target : "patch";
-    grunt.task.run("bump-only:" + target, "client", "bump-commit", "shell:publish");
+    target = target ? target : "patch";
+    grunt.task.run("default", "bump-only:" + target, "client", "bump-commit", "shell:publish");
   });
 
 };
