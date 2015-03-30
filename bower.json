@@ -28,6 +28,8 @@
     "node_modules",
     "coverage",
     "test",
+    "index.js",
+    "Gruntfile.js",
     "**/*.json",
     "*.sublime-project",
     "*.sublime-workspace",

@@ -1,5 +1,6 @@
 node_modules/
 coverage/
+test/
 
 .DS_Store
 .editorconfig
@@ -12,6 +13,9 @@ coverage/
 npm-debug.log
 Gruntfile.js
 bower.json
+
+kommunkoder.js
+kommunkoder.min.js
 
 *.sublime-project
 *.sublime-workspace
