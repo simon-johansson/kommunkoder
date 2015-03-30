@@ -1,7 +1,7 @@
 {
   "name": "kommunkoder",
   "main": "kommunkoder.js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "homepage": "https://github.com/simon-johansson/kommunkoder",
   "authors": [
     "Simon Johansson <mail@simon-johansson.com>"

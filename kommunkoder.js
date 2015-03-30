@@ -1,5 +1,5 @@
 /*
- *   kommunkoder - v1.1.0
+ *   kommunkoder - v1.1.1
  *   Collection of all municipalities in Sweden with corresponding county and municipality codes (kommunkoder).
  *   https://github.com/simon-johansson/kommunkoder
  *   by Simon Johansson <mail@simon-johansson.com>
