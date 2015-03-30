@@ -1,7 +1,10 @@
 node_modules/
 coverage/
+
 .DS_Store
 npm-debug.log
+
 *.sublime-project
 *.sublime-workspace
+
 TODO.md
