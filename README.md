@@ -2,6 +2,8 @@
 
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Code Climate][codeclimate-image]][codeclimate-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
+[![Sauce Test Status][saucelabs-image]][saucelabs-url]
+
 > Collection of all municipalities in Sweden with corresponding county and municipality codes (kommunkoder)
 
 Data is provided by [SCB](http://www.scb.se/en_/Finding-statistics/Regional-statistics/Regional-divisions/Counties-and-municipalities/Counties-and-municipalities-in-numerical-order/) (Statistiska Centralbyrån). Latest update to data used in lib was done **2015-03-09**.
@@ -64,3 +66,5 @@ MIT © [Simon Johansson](mailto:mail@simon-johansson.com)
 [codeclimate-url]: https://codeclimate.com/github/simon-johansson/kommunkoder
 [daviddm-image]: https://david-dm.org/simon-johansson/kommunkoder.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/simon-johansson/kommunkoder
+[saucelabs-image]: https://saucelabs.com/browser-matrix/kommunkoder.svg
+[saucelabs-url]: https://saucelabs.com/u/kommunkoder
