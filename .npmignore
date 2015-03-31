@@ -8,6 +8,7 @@ test/
 .gitignore
 .jshintrc
 .travis.yml
+.zuul.yml
 .yo-rc.json
 
 npm-debug.log

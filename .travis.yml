@@ -1,8 +1,13 @@
 sudo: false
 language: node_js
 node_js:
-  - 'iojs'
-  - '0.12'
-  - '0.10'
-
-after_script: npm run travis
+- iojs
+- '0.12'
+- '0.10'
+after_script:
+  - npm run coveralls
+  - npm run zuul
+env:
+  global:
+  - secure: l/Oq6J3WSPMyfyV2P40tefzU8w97E+08Z9fJMQDdFP3pgawmMI56l22D34dJbXLDvxomQehJQoJi8P6OALIs7s4foqnyXykvVnxPco+prjfz8B5Tii7qAPCESLx0eFzACG+3SbWUZEm2WcRPbHrFe6vpshxd8GXDwLEDqMoHfBU=
+  - secure: DxzHVhk96IMyFCZRx25xNdghZ22GJqyjE5la08J1COpvIbv0w4coBaHzoJnAKtiTvdN072/73p5LmMEFiZ/Lv2GOXUe3DOtRQ5hLpIWP4naK/Q4Mcp0Ia42kbnqXG4KSzjt2++wyYFa32Pr1+Fr3l0QQ1t7Cqj8xkeIQhJvm8JU=

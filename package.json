@@ -32,7 +32,8 @@
     "grunt-banner": "^0.3.1",
     "grunt-bump": "^0.3.0",
     "grunt-shell": "^1.1.2",
-    "grunt-contrib-uglify": "^0.8.0"
+    "grunt-contrib-uglify": "^0.8.0",
+    "zuul": "^2.1.1"
   },
   "homepage": "https://github.com/simon-johansson/kommunkoder",
   "keywords": [
@@ -55,6 +56,7 @@
   },
   "scripts": {
     "test": "grunt",
-    "travis": "node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "zuul": "zuul -- dist/test/test.js",
+    "coveralls": "node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   }
 }
