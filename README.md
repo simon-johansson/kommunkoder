@@ -1,6 +1,8 @@
 # kommunkoder
 
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Code Climate][codeclimate-image]][codeclimate-url] [![Dependency Status][daviddm-image]][daviddm-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][daviddm-image]][daviddm-url]
+
+<!-- [![Code Climate][codeclimate-image]][codeclimate-url] -->
 
 [![Sauce Test Status][saucelabs-image]][saucelabs-url]
 
@@ -10,12 +12,26 @@ Data is provided by [SCB](http://www.scb.se/en_/Finding-statistics/Regional-stat
 
 ## Install
 
+####Client
+```sh
+$ bower install kommunkoder --save
+```
+
+####Node
 ```sh
 $ npm install kommunkoder --save
 ```
 
-```sh
-$ bower install kommunkoder --save
+##Include
+
+####Client
+```html
+<script src="bower_components/kommunkoder/kommunkoder.min.js"></script>
+```
+
+####Node
+```js
+var kommunkoder = require('kommunkoder');
 ```
 
 ## Usage
@@ -62,9 +78,9 @@ MIT © [Simon Johansson](mailto:mail@simon-johansson.com)
 [travis-url]: https://travis-ci.org/simon-johansson/kommunkoder
 [coveralls-image]: https://coveralls.io/repos/simon-johansson/kommunkoder/badge.svg?branch=master
 [coveralls-url]: https://coveralls.io/r/simon-johansson/kommunkoder?branch=master
-[codeclimate-image]: https://codeclimate.com/github/simon-johansson/kommunkoder/badges/gpa.svg
-[codeclimate-url]: https://codeclimate.com/github/simon-johansson/kommunkoder
 [daviddm-image]: https://david-dm.org/simon-johansson/kommunkoder.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/simon-johansson/kommunkoder
 [saucelabs-image]: https://saucelabs.com/browser-matrix/kommunkoder.svg
 [saucelabs-url]: https://saucelabs.com/u/kommunkoder
+<!-- [codeclimate-image]: https://codeclimate.com/github/simon-johansson/kommunkoder/badges/gpa.svg -->
+<!-- [codeclimate-url]: https://codeclimate.com/github/simon-johansson/kommunkoder -->
